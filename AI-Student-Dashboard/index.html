@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Student Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-j5hSjJZR5HH0iZPOB5P7bX8wTzv3v7W1WZ+qzNjVIPz3D77G1BvmWkz/bRQ4b0ycF2aDJ6Ti1GRJlVdJawb0Og=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-panel">
+          <div class="brand-badge">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="brand-text">
+            <strong>AI Student Dashboard</strong>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <a class="nav-item active" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-book-open"></i></span>
+            <span>Courses</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+            <span>Progress</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-clipboard-list"></i></span>
+            <span>Tasks</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-robot"></i></span>
+            <span>AI Assistant</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-calendar-days"></i></span>
+            <span>Schedule</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-trophy"></i></span>
+            <span>Achievements</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon"><i class="fa-solid fa-user"></i></span>
+            <span>Profile</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Premium AI learning experience</p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="topbar-title">
+            <div class="logo-dot"></div>
+            <div>
+              <p class="eyebrow">AI Student Dashboard</p>
+              <h1>Student workspace</h1>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="icon-button" aria-label="Notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="badge"></span>
+            </button>
+            <button class="icon-button" aria-label="Settings">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <button class="profile-button" aria-label="Student profile">
+              SA
+            </button>
+          </div>
+        </header>
+
+        <section class="main-grid">
+          <article class="card welcome-card">
+            <div class="welcome-copy">
+              <p>Welcome Back, Samarth!</p>
+              <h2>Keep your momentum strong.</h2>
+              <p class="welcome-subtext">
+                You studied <strong>5 hours</strong> yesterday. Current Streak:
+                <strong>15 Days</strong> <span>🔥</span>
+              </p>
+            </div>
+            <div class="welcome-visual"></div>
+          </article>
+
+          <section class="stats-grid">
+            <article class="stat-card">
+              <span class="stat-label">Courses Completed</span>
+              <h3>12</h3>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Study Hours</span>
+              <h3>145</h3>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Tasks Completed</span>
+              <h3>56</h3>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Current Streak</span>
+              <h3>15 Days</h3>
+            </article>
+          </section>
+
+          <article class="card progress-card">
+            <div class="section-header">
+              <div>
+                <p>Learning Progress</p>
+                <h3>Track your course momentum</h3>
+              </div>
+              <span class="badge-pill">4 Modules</span>
+            </div>
+
+            <div class="progress-list">
+              <div class="progress-item">
+                <div class="progress-title">
+                  <span>HTML</span>
+                  <strong>90%</strong>
+                </div>
+                <div class="progress-bar progress-blue">
+                  <span style="width: 90%;"></span>
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-title">
+                  <span>CSS</span>
+                  <strong>40%</strong>
+                </div>
+                <div class="progress-bar progress-purple">
+                  <span style="width: 40%;"></span>
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-title">
+                  <span>DSA</span>
+                  <strong>60%</strong>
+                </div>
+                <div class="progress-bar progress-orange">
+                  <span style="width: 60%;"></span>
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-title">
+                  <span>Python</span>
+                  <strong>80%</strong>
+                </div>
+                <div class="progress-bar progress-green">
+                  <span style="width: 80%;"></span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <section class="split-grid">
+            <article class="card tasks-panel">
+              <div class="section-header">
+                <div>
+                  <p>Today's Tasks</p>
+                  <h3>Focus for the day</h3>
+                </div>
+              </div>
+              <ul class="task-list">
+                <li><label><input type="checkbox" /> Complete HTML Dashboard</label></li>
+                <li><label><input type="checkbox" /> Solve 2 DSA Questions</label></li>
+                <li><label><input type="checkbox" /> Watch CSS Tutorial</label></li>
+                <li><label><input type="checkbox" /> Push Code to GitHub</label></li>
+              </ul>
+            </article>
+
+            <article class="card schedule-panel">
+              <div class="section-header">
+                <div>
+                  <p>Upcoming Schedule</p>
+                  <h3>Plan your next sessions</h3>
+                </div>
+              </div>
+              <div class="timeline-list">
+                <div class="timeline-row">
+                  <span class="timeline-time">10:00 AM</span>
+                  <span class="timeline-activity">HTML Practice</span>
+                </div>
+                <div class="timeline-row">
+                  <span class="timeline-time">02:00 PM</span>
+                  <span class="timeline-activity">DSA</span>
+                </div>
+                <div class="timeline-row">
+                  <span class="timeline-time">06:00 PM</span>
+                  <span class="timeline-activity">Python</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="split-grid">
+            <article class="card assistant-panel">
+              <div class="section-header">
+                <div>
+                  <p>AI Assistant</p>
+                  <h3>Ask AI Anything</h3>
+                </div>
+                <span class="badge-pill accent">Live</span>
+              </div>
+              <div class="assistant-chat">
+                <p>Ask AI Anything...</p>
+              </div>
+              <div class="assistant-input-row">
+                <div class="assistant-input">Type a question or request</div>
+                <button class="primary-button">Send</button>
+              </div>
+            </article>
+
+            <article class="card recommendation-card">
+              <div class="section-header">
+                <div>
+                  <p>AI Recommendation</p>
+                  <h3>Smart study guidance</h3>
+                </div>
+              </div>
+              <p class="recommendation-copy">
+                Your HTML progress is excellent. Focus on CSS this week to balance your skill set and unlock advanced layouts.
+              </p>
+              <div class="recommendation-badge">
+                Suggested Study Time: <strong>2 Hours Daily</strong>
+              </div>
+            </article>
+          </section>
+
+          <article class="card achievements-card">
+            <div class="section-header">
+              <div>
+                <p>Achievements</p>
+                <h3>Badges earned</h3>
+              </div>
+            </div>
+            <div class="badge-grid">
+              <div class="badge-pill card-badge">
+                <span>🏅</span>
+                <div>
+                  <strong>HTML Beginner</strong>
+                </div>
+              </div>
+              <div class="badge-pill card-badge">
+                <span>🏅</span>
+                <div>
+                  <strong>10 Day Streak</strong>
+                </div>
+              </div>
+              <div class="badge-pill card-badge">
+                <span>🏅</span>
+                <div>
+                  <strong>DSA Learner</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card quote-card">
+            <div class="quote-copy">
+              <p>Quote of the Day</p>
+              <blockquote>“Consistency beats intensity.”</blockquote>
+            </div>
+          </article>
+        </section>
+
+        <footer class="app-footer">
+          AI Student Dashboard | Created by Samarth
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
