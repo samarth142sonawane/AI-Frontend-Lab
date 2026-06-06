@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PitchPulse Cricket Analytics | Advanced Cricket Insights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="PitchPlush_logo.png" alt="PitchPulse Logo" class="logo-img">
+                <span class="logo-text">PitchPulse</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Light</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#live-score" class="nav-link">Live Score</a></li>
+                <li><a href="#news" class="nav-link">Cricket News</a></li>
+                <li><a href="#leagues" class="nav-link">Leagues</a></li>
+                <li><a href="#series" class="nav-link">Series</a></li>
+                <li><a href="#player-stats" class="nav-link">Player Stats</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="stive_smith.webp" alt="Steve Smith" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Analyze with PitchPulse</h1>
+            <p class="hero-subtitle">Advanced Cricket Analytics, Live Scores, Rankings and Match Insights</p>
+            <button class="cta-button">Explore Analytics</button>
+        </div>
+    </section>
+
+    <!-- LIVE SCORE SECTION -->
+    <section id="live-score" class="live-score-section">
+        <div class="container">
+            <h2 class="section-title">Live Score</h2>
+            <p class="section-subtitle">Current matches happening around the world</p>
+            <div class="live-score-grid">
+                <!-- Match Card 1 -->
+                <div class="match-card">
+                    <div class="match-header">
+                        <div class="team">
+                            <div class="team-flag">🇮🇳</div>
+                            <div class="team-info">
+                                <p class="team-name">India</p>
+                                <p class="team-score">175/4</p>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="team">
+                            <div class="team-flag">🇵🇰</div>
+                            <div class="team-info">
+                                <p class="team-name">Pakistan</p>
+                                <p class="team-score">168/6</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-details">
+                        <p><span class="label">Overs:</span> <span>18.3/20</span></p>
+                        <p><span class="label">Status:</span> <span class="status live">LIVE</span></p>
+                        <p><span class="label">Venue:</span> <span>Dubai</span></p>
+                    </div>
+                </div>
+
+                <!-- Match Card 2 -->
+                <div class="match-card">
+                    <div class="match-header">
+                        <div class="team">
+                            <div class="team-flag">🇦🇺</div>
+                            <div class="team-info">
+                                <p class="team-name">Australia</p>
+                                <p class="team-score">182/3</p>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="team">
+                            <div class="team-flag">🇳🇿</div>
+                            <div class="team-info">
+                                <p class="team-name">New Zealand</p>
+                                <p class="team-score">156/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-details">
+                        <p><span class="label">Overs:</span> <span>19.2/20</span></p>
+                        <p><span class="label">Status:</span> <span class="status live">LIVE</span></p>
+                        <p><span class="label">Venue:</span> <span>Melbourne</span></p>
+                    </div>
+                </div>
+
+                <!-- Match Card 3 -->
+                <div class="match-card">
+                    <div class="match-header">
+                        <div class="team">
+                            <div class="team-flag">🇿🇦</div>
+                            <div class="team-info">
+                                <p class="team-name">South Africa</p>
+                                <p class="team-score">198/5</p>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="team">
+                            <div class="team-flag">🇧🇩</div>
+                            <div class="team-info">
+                                <p class="team-name">Bangladesh</p>
+                                <p class="team-score">145/9</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-details">
+                        <p><span class="label">Overs:</span> <span>18.5/20</span></p>
+                        <p><span class="label">Status:</span> <span class="status live">LIVE</span></p>
+                        <p><span class="label">Venue:</span> <span>Johannesburg</span></p>
+                    </div>
+                </div>
+
+                <!-- Match Card 4 -->
+                <div class="match-card">
+                    <div class="match-header">
+                        <div class="team">
+                            <div class="team-flag">🇬🇧</div>
+                            <div class="team-info">
+                                <p class="team-name">England</p>
+                                <p class="team-score">204/2</p>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="team">
+                            <div class="team-flag">🇼🇮</div>
+                            <div class="team-info">
+                                <p class="team-name">West Indies</p>
+                                <p class="team-score">172/8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-details">
+                        <p><span class="label">Overs:</span> <span>19.1/20</span></p>
+                        <p><span class="label">Status:</span> <span class="status live">LIVE</span></p>
+                        <p><span class="label">Venue:</span> <span>London</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRICKET NEWS SECTION -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2 class="section-title">Latest Cricket News</h2>
+            <p class="section-subtitle">Stay updated with the hottest cricket stories</p>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>India Dominates ODI Series Against England</h3>
+                        <p>India's bowling attack showcases exceptional performance in the third ODI match against England.</p>
+                        <button class="read-more-btn">Read More →</button>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>Babar Azam Breaks All-Time ODI Records</h3>
+                        <p>Pakistan's star batsman achieves historic milestone in T20 International cricket with 50 centuries.</p>
+                        <button class="read-more-btn">Read More →</button>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>Mitchell Starc Claims 200th Test Wicket Milestone</h3>
+                        <p>Australian fast bowler becomes the 11th player to reach this prestigious Test cricket milestone.</p>
+                        <button class="read-more-btn">Read More →</button>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>IPL 2024 Auction: Star Players Command Record Prices</h3>
+                        <p>Indian Premier League's mega auction sees unprecedented bidding for international and domestic talents.</p>
+                        <button class="read-more-btn">Read More →</button>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>Women's Cricket: New Zealand's Historic Series Victory</h3>
+                        <p>White Ferns secure commanding series win against Australia with brilliant all-round performances.</p>
+                        <button class="read-more-btn">Read More →</button>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h3>World Test Championship: Final Spots Confirmed</h3>
+                        <p>Top four teams qualify for the World Test Championship final with thrilling finishes across leagues.</p>
+                        <button class="read-more-btn">Read More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAGUES SECTION -->
+    <section id="leagues" class="leagues-section">
+        <div class="container">
+            <h2 class="section-title">Cricket Leagues</h2>
+            <p class="section-subtitle">Explore international and domestic tournaments</p>
+            <div class="leagues-grid">
+                <!-- International Leagues Card -->
+                <div class="league-card">
+                    <h3>International Leagues</h3>
+                    <div class="leagues-list">
+                        <div class="league-item">
+                            <h4>IPL (Indian Premier League)</h4>
+                            <p><span class="league-label">Season:</span> 2024</p>
+                            <p><span class="league-label">Last Winner:</span> Mumbai Indians</p>
+                            <p class="league-desc">Premier T20 league featuring eight franchises with the world's best players.</p>
+                        </div>
+                        <div class="league-item">
+                            <h4>BBL (Big Bash League)</h4>
+                            <p><span class="league-label">Season:</span> 2024-25</p>
+                            <p><span class="league-label">Last Winner:</span> Brisbane Heat</p>
+                            <p class="league-desc">Australia's premier T20 competition showcasing top-tier domestic talent.</p>
+                        </div>
+                        <div class="league-item">
+                            <h4>PSL (Pakistan Super League)</h4>
+                            <p><span class="league-label">Season:</span> 2024</p>
+                            <p><span class="league-label">Last Winner:</span> Peshawar Zalmi</p>
+                            <p class="league-desc">Pakistan's flagship T20 tournament attracting international cricket stars.</p>
+                        </div>
+                        <div class="league-item">
+                            <h4>The Hundred</h4>
+                            <p><span class="league-label">Season:</span> 2024</p>
+                            <p><span class="league-label">Last Winner:</span> Manchester Originals</p>
+                            <p class="league-desc">UK's fastest cricket format featuring 100-ball matches and innovative gameplay.</p>
+                        </div>
+                        <div class="league-item">
+                            <h4>WPL (Women's Premier League)</h4>
+                            <p><span class="league-label">Season:</span> 2024</p>
+                            <p><span class="league-label">Last Winner:</span> Royal Challengers Bangalore</p>
+                            <p class="league-desc">India's dedicated T20 league for women's professional cricket.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domestic Competitions Card -->
+                <div class="league-card">
+                    <h3>Domestic Competitions</h3>
+                    <div class="leagues-list">
+                        <div class="league-item">
+                            <h4>Ranji Trophy</h4>
+                            <p><span class="league-label">Season:</span> 2024-25</p>
+                            <p><span class="league-label">Champion:</span> Bengal</p>
+                            <p class="league-desc">India's premier domestic first-class cricket competition established in 1934.</p>
+                        </div>
+                        <div class="league-item">
+                            <h4>Duleep Trophy</h4>
+                            <p><span class="league-label">Season:</span> 2024</p>
+                            <p><span class="league-label">Champion:</span> India Red</p>
+                            <p class="league-desc">Multi-day competition featuring India's best regional cricket talent.</p>
+                        </div>
+                        <div class="league-item">
+                            <h4>Syed Mushtaq Ali Trophy</h4>
+                            <p><span class="league-label">Season:</span> 2024</p>
+                            <p><span class="league-label">Champion:</span> Delhi Capitals</p>
+                            <p class="league-desc">India's domestic T20 championship showcasing fast-paced cricket action.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERIES SECTION -->
+    <section id="series" class="series-section">
+        <div class="container">
+            <h2 class="section-title">International Series</h2>
+            <p class="section-subtitle">Ongoing series across different formats</p>
+            
+            <div class="series-tabs">
+                <button class="tab-btn active" data-tab="t20">T20</button>
+                <button class="tab-btn" data-tab="odi">ODI</button>
+                <button class="tab-btn" data-tab="test">Test</button>
+            </div>
+
+            <div class="series-content">
+                <!-- T20 Series -->
+                <div id="t20-tab" class="tab-content active">
+                    <div class="series-grid">
+                        <div class="series-card">
+                            <h3>India vs England</h3>
+                            <p><span class="series-label">Matches:</span> 5 T20 Internationals</p>
+                            <p><span class="series-label">Current:</span> Match 3 (India leads 2-0)</p>
+                            <p><span class="series-label">Venue:</span> New Delhi, Mumbai, Bangalore</p>
+                            <p class="series-desc">High-octane T20 series featuring two powerhouses of world cricket.</p>
+                        </div>
+                        <div class="series-card">
+                            <h3>Australia vs New Zealand</h3>
+                            <p><span class="series-label">Matches:</span> 3 T20 Internationals</p>
+                            <p><span class="series-label">Current:</span> Match 2 (Australia leads 1-0)</p>
+                            <p><span class="series-label">Venue:</span> Melbourne, Sydney, Perth</p>
+                            <p class="series-desc">Trans-Tasman rivalry continues with exciting T20 cricket action.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ODI Series -->
+                <div id="odi-tab" class="tab-content">
+                    <div class="series-grid">
+                        <div class="series-card">
+                            <h3>South Africa vs Pakistan</h3>
+                            <p><span class="series-label">Matches:</span> 3 ODI Internationals</p>
+                            <p><span class="series-label">Current:</span> Match 2 (South Africa leads 1-0)</p>
+                            <p><span class="series-label">Venue:</span> Johannesburg, Cape Town, Durban</p>
+                            <p class="series-desc">Competitive ODI series between two quality cricket-playing nations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Series -->
+                <div id="test-tab" class="tab-content">
+                    <div class="series-grid">
+                        <div class="series-card">
+                            <h3>India vs Australia</h3>
+                            <p><span class="series-label">Matches:</span> 4 Test Matches</p>
+                            <p><span class="series-label">Current:</span> Match 2 (India leads 1-0)</p>
+                            <p><span class="series-label">Venue:</span> Delhi, Bangalore, Mumbai, Chennai</p>
+                            <p class="series-desc">Classic Test series showcasing the traditional format at its finest.</p>
+                        </div>
+                        <div class="series-card">
+                            <h3>England vs New Zealand</h3>
+                            <p><span class="series-label">Matches:</span> 3 Test Matches</p>
+                            <p><span class="series-label">Current:</span> Match 1 (Series level)</p>
+                            <p><span class="series-label">Venue:</span> Old Trafford, Headingley, The Oval</p>
+                            <p class="series-desc">Traditional Test cricket rivalry between two historic cricket nations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAYER STATS SECTION -->
+    <section id="player-stats" class="player-stats-section">
+        <div class="container">
+            <h2 class="section-title">ICC Rankings</h2>
+            <p class="section-subtitle">Top-ranked players across all formats</p>
+            
+            <div class="rankings-grid">
+                <!-- ODI Batters -->
+                <div class="ranking-card">
+                    <h3>Top ODI Batters</h3>
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Country</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Virat Kohli</td>
+                                <td>🇮🇳 India</td>
+                                <td>898</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Babar Azam</td>
+                                <td>🇵🇰 Pakistan</td>
+                                <td>875</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Kane Williamson</td>
+                                <td>🇳🇿 New Zealand</td>
+                                <td>857</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Joe Root</td>
+                                <td>🇬🇧 England</td>
+                                <td>842</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Steve Smith</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>831</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ODI Bowlers -->
+                <div class="ranking-card">
+                    <h3>Top ODI Bowlers</h3>
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Country</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Jasprit Bumrah</td>
+                                <td>🇮🇳 India</td>
+                                <td>887</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Pat Cummins</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>869</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mitchell Starc</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>851</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Trent Boult</td>
+                                <td>🇳🇿 New Zealand</td>
+                                <td>834</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Shaheen Afridi</td>
+                                <td>🇵🇰 Pakistan</td>
+                                <td>816</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- T20 Batters -->
+                <div class="ranking-card">
+                    <h3>Top T20 Batters</h3>
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Country</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Suryakumar Yadav</td>
+                                <td>🇮🇳 India</td>
+                                <td>921</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Travis Head</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>906</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Rohit Sharma</td>
+                                <td>🇮🇳 India</td>
+                                <td>894</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Glen Maxwell</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>879</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Harry Brook</td>
+                                <td>🇬🇧 England</td>
+                                <td>862</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- T20 Bowlers -->
+                <div class="ranking-card">
+                    <h3>Top T20 Bowlers</h3>
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Country</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Rashid Khan</td>
+                                <td>🇦🇫 Afghanistan</td>
+                                <td>910</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jasprit Bumrah</td>
+                                <td>🇮🇳 India</td>
+                                <td>898</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Wanindu Hasaranga</td>
+                                <td>🇱🇰 Sri Lanka</td>
+                                <td>881</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Reece Topley</td>
+                                <td>🇬🇧 England</td>
+                                <td>867</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Mark Wood</td>
+                                <td>🇬🇧 England</td>
+                                <td>851</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Test Batters -->
+                <div class="ranking-card">
+                    <h3>Top Test Batters</h3>
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Country</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ben Stokes</td>
+                                <td>🇬🇧 England</td>
+                                <td>906</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kane Williamson</td>
+                                <td>🇳🇿 New Zealand</td>
+                                <td>892</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Steve Smith</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>878</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Virat Kohli</td>
+                                <td>🇮🇳 India</td>
+                                <td>861</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Joe Root</td>
+                                <td>🇬🇧 England</td>
+                                <td>847</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Test Bowlers -->
+                <div class="ranking-card">
+                    <h3>Top Test Bowlers</h3>
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Country</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Scott Boland</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>893</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jasprit Bumrah</td>
+                                <td>🇮🇳 India</td>
+                                <td>879</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mitchell Starc</td>
+                                <td>🇦🇺 Australia</td>
+                                <td>864</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Gus Atkinson</td>
+                                <td>🇬🇧 England</td>
+                                <td>849</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Kyle Jamieson</td>
+                                <td>🇳🇿 New Zealand</td>
+                                <td>833</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANALYTICS COUNTERS SECTION -->
+    <section id="analytics" class="analytics-section">
+        <div class="container">
+            <h2 class="section-title">Our Analytics Impact</h2>
+            <p class="section-subtitle">Delivering insights to cricket enthusiasts worldwide</p>
+            <div class="counters-grid">
+                <div class="counter-card">
+                    <div class="counter-icon">📊</div>
+                    <div class="counter-number" data-target="5000">0</div>
+                    <p class="counter-label">Total Matches Analyzed</p>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-icon">🎬</div>
+                    <div class="counter-number" data-target="25000">0</div>
+                    <p class="counter-label">Video Clips Processed</p>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-icon">👥</div>
+                    <div class="counter-number" data-target="10000">0</div>
+                    <p class="counter-label">Player Statistics Stored</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="PitchPlush_logo.png" alt="PitchPulse" class="footer-logo-img">
+                        <span>PitchPulse</span>
+                    </div>
+                    <p>Advanced cricket analytics platform delivering real-time insights and comprehensive statistics.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#live-score">Live Score</a></li>
+                        <li><a href="#news">Cricket News</a></li>
+                        <li><a href="#leagues">Leagues</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="#series">Series</a></li>
+                        <li><a href="#player-stats">Player Stats</a></li>
+                        <li><a href="#analytics">Analytics</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">▶</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PitchPulse Cricket Analytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
