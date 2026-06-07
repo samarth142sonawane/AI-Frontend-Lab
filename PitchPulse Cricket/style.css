@@ -656,7 +656,9 @@ body.light-mode .read-more-btn:hover {
    SERIES SECTION
    ======================================== */
 
-.series-tabs {
+.series-tabs,
+.league-tabs,
+.ranking-tabs {
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
@@ -664,7 +666,9 @@ body.light-mode .read-more-btn:hover {
     flex-wrap: wrap;
 }
 
-.tab-btn {
+.tab-btn,
+.league-tab-btn,
+.ranking-tab-btn {
     padding: 12px 30px;
     background: transparent;
     border: 2px solid var(--border-color);
@@ -676,24 +680,32 @@ body.light-mode .read-more-btn:hover {
     transition: var(--transition);
 }
 
-.tab-btn:hover {
+.tab-btn:hover,
+.league-tab-btn:hover,
+.ranking-tab-btn:hover {
     border-color: var(--secondary-color);
     color: var(--secondary-color);
 }
 
-.tab-btn.active {
+.tab-btn.active,
+.league-tab-btn.active,
+.ranking-tab-btn.active {
     background: var(--secondary-color);
     border-color: transparent;
     color: var(--dark-bg);
     box-shadow: none;
 }
 
-.tab-content {
+.tab-content,
+.league-tab-content,
+.ranking-tab-content {
     display: none;
     animation: fadeIn 0.3s ease;
 }
 
-.tab-content.active {
+.tab-content.active,
+.league-tab-content.active,
+.ranking-tab-content.active {
     display: block;
 }
 

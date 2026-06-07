@@ -114,6 +114,62 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// LEAGUE TABS
+// ========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const leagueTabButtons = document.querySelectorAll('.league-tab-btn');
+    const leagueTabContents = document.querySelectorAll('.league-tab-content');
+
+    leagueTabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const leagueName = this.getAttribute('data-league');
+
+            leagueTabButtons.forEach(btn => btn.classList.remove('active'));
+            leagueTabContents.forEach(content => content.classList.remove('active'));
+
+            this.classList.add('active');
+            const activeContent = document.getElementById(leagueName + '-tab');
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+        });
+    });
+
+    if (leagueTabButtons.length > 0) {
+        leagueTabButtons[0].classList.add('active');
+        leagueTabContents[0].classList.add('active');
+    }
+});
+
+// RANKING TABS
+// ========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const rankingTabButtons = document.querySelectorAll('.ranking-tab-btn');
+    const rankingTabContents = document.querySelectorAll('.ranking-tab-content');
+
+    rankingTabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const rankingType = this.getAttribute('data-ranking');
+
+            rankingTabButtons.forEach(btn => btn.classList.remove('active'));
+            rankingTabContents.forEach(content => content.classList.remove('active'));
+
+            this.classList.add('active');
+            const activeContent = document.getElementById(rankingType + '-ranking-tab');
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+        });
+    });
+
+    if (rankingTabButtons.length > 0) {
+        rankingTabButtons[0].classList.add('active');
+        rankingTabContents[0].classList.add('active');
+    }
+});
+
 // ========================================
 // ANIMATED COUNTERS
 // ========================================
