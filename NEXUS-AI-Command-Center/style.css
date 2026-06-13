@@ -77,7 +77,10 @@ body{
 /* NAV */
 .nav-wrap{position:fixed;top:0;left:0;right:0;height:var(--nav-height);z-index:120;backdrop-filter:blur(8px);transition:background 300ms ease,opacity 300ms ease;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border-bottom:1px solid rgba(255,255,255,0.02)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:calc((var(--nav-height) - 40px)/2) 0}
-.logo{font-weight:800;color:var(--text);text-decoration:none;font-size:1.05rem;letter-spacing:0.8px}
+.logo{font-weight:800;color:var(--text);text-decoration:none;font-size:1.05rem;letter-spacing:0.8px;display:flex;align-items:center;gap:0.6rem;transition:opacity 280ms ease}
+.logo:hover{opacity:0.85}
+.logo-image{height:38px;width:auto;display:block;object-fit:contain}
+.logo-text{font-size:1.05rem;font-weight:800;letter-spacing:0.8px}
 .nav-links{display:flex;gap:1rem}
 .nav-link{color:rgba(255,255,255,0.85);text-decoration:none;padding:0.5rem 0.8rem 0.95rem;border-radius:6px;position:relative;transition:color 200ms ease, transform 180ms}
 .nav-link::after{display:none}
