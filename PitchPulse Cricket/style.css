@@ -167,7 +167,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -177,14 +177,18 @@ body {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
-    padding: 0.5rem 0;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0.15rem;
+    left: 0.8rem;
     width: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
@@ -193,11 +197,14 @@ body {
 
 .nav-link:hover::after,
 .nav-link.active::after {
-    width: 100%;
+    width: calc(100% - 1.8rem);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--secondary-color);
+    border-color: rgba(174, 199, 216, 0.8);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .mobile-menu-btn {

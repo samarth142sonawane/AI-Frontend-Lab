@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEXUS AI Command Center</title>
+  <meta name="description" content="NEXUS AI — Real-time intelligence platform for modern organizations." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav-wrap" id="navbar">
+    <div class="nav container">
+      <a class="logo" href="#home">NEXUS AI</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#solutions" class="nav-link">Solutions</a>
+        <a href="#analytics" class="nav-link analytics-link">Analytics</a>
+        <a href="#insights" class="nav-link">Insights</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn ghost" id="getStarted">Get Started</button>
+        <button class="btn theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="icon icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+            <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4M12 7a5 5 0 100 10 5 5 0 000-10z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="brand">NEXUS AI</h1>
+          <h2 class="tagline">Monitor. Analyze. Predict.</h2>
+          <p class="lead">Real-time intelligence platform for modern organizations powered by advanced AI systems.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#analytics">Launch Platform</a>
+            <a class="btn secondary" href="#analytics">Explore Analytics</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-card glass">
+            <div class="spark" style="--i:0"></div>
+            <div class="spark" style="--i:1"></div>
+            <div class="spark" style="--i:2"></div>
+            <div class="visual-image-wrap">
+              <img src="sample_dashboard.png" alt="Dashboard preview" class="dashboard-screenshot">
+            </div>
+            <div class="visual-grid">
+              <div class="vg-row">
+                <div class="vg-cell"></div>
+                <div class="vg-cell"></div>
+                <div class="vg-cell"></div>
+              </div>
+              <div class="vg-row">
+                <div class="vg-cell"></div>
+                <div class="vg-cell"></div>
+                <div class="vg-cell"></div>
+              </div>
+            </div>
+            <div class="dash-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="metrics" class="section metrics">
+      <div class="container">
+        <h3 class="section-title">AI Metrics</h3>
+        <div class="metrics-grid">
+          <div class="metric card glass" data-target="2500000">
+            <div class="metric-label">Data Points Processed</div>
+            <div class="metric-value">0</div>
+          </div>
+          <div class="metric card glass" data-target="9870" data-decimals="1">
+            <div class="metric-label">Prediction Accuracy</div>
+            <div class="metric-value">0%</div>
+          </div>
+          <div class="metric card glass" data-target="50000">
+            <div class="metric-label">AI Requests</div>
+            <div class="metric-value">0</div>
+          </div>
+          <div class="metric card glass" data-target="99.9" data-fixed="1">
+            <div class="metric-label">System Availability</div>
+            <div class="metric-value">0%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section solutions">
+      <div class="container">
+        <h3 class="section-title">Solutions</h3>
+        <div class="solutions-grid">
+          <article class="feature card glass">
+            <div class="icon"><!-- predictive icon -->
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M3 12h3l3 8 4-16 4 8h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>Predictive Analytics</h4>
+            <p>Forecast future outcomes using AI models.</p>
+          </article>
+
+          <article class="feature card glass">
+            <div class="icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 2v6l4 2-4 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>AI Monitoring</h4>
+            <p>Track model performance in real time.</p>
+          </article>
+
+          <article class="feature card glass">
+            <div class="icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.2"/></svg>
+            </div>
+            <h4>Risk Detection</h4>
+            <p>Identify anomalies before they become threats.</p>
+          </article>
+
+          <article class="feature card glass">
+            <div class="icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h4>Decision Intelligence</h4>
+            <p>Convert complex data into actionable insights.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="analytics" class="section dashboard">
+      <div class="container">
+        <h3 class="section-title">Live Dashboard Preview</h3>
+        <p class="section-copy">Monitor operational performance, model health, and response trends at a glance. NEXUS AI surfaces the most important signals so your team can act faster.</p>
+        <div class="analytics-summary-grid">
+          <div class="analytics-card card glass">
+            <div class="analytics-value">82%</div>
+            <div class="analytics-label">Model Drift Resolved</div>
+          </div>
+          <div class="analytics-card card glass">
+            <div class="analytics-value">12m</div>
+            <div class="analytics-label">Average Recovery Time</div>
+          </div>
+          <div class="analytics-card card glass">
+            <div class="analytics-value">1.8x</div>
+            <div class="analytics-label">Insight Delivery Speed</div>
+          </div>
+        </div>
+        <div class="dashboard-grid">
+          <div class="dash card glass">
+            <div class="dash-row">
+              <div>
+                <div class="dash-label">System Health</div>
+                <div class="dash-value">98%</div>
+                <div class="progress"><div class="progress-fill" style="width:98%"></div></div>
+              </div>
+              <div>
+                <div class="dash-label">Models Running</div>
+                <div class="dash-value">24</div>
+                <div class="small-pill">24 active</div>
+              </div>
+            </div>
+            <div class="dash-row">
+              <div>
+                <div class="dash-label">Response Time</div>
+                <div class="dash-value">0.4s</div>
+                <div class="progress"><div class="progress-fill" style="width:40%"></div></div>
+              </div>
+              <div>
+                <div class="dash-label">Active Alerts</div>
+                <div class="dash-value alert">2</div>
+                <div class="small-pill alert-pill">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="dash-graph card glass">
+            <div class="graph-top">
+              <div class="legend"><span class="dot accent"></span>Throughput</div>
+              <div class="legend"><span class="dot secondary"></span>Latency</div>
+            </div>
+            <div class="mini-graph" aria-hidden="true">
+              <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                <polyline points="0,50 30,35 60,20 90,30 120,18 150,28 180,15 200,22" fill="none" stroke-width="2" stroke="url(#g1)" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="1">
+                    <stop offset="0" stop-color="#00E5FF"/>
+                    <stop offset="1" stop-color="#7C3AED"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="graph-legend">Real-time telemetry snapshot</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="section insights">
+      <div class="container">
+        <h3 class="section-title">AI Insights</h3>
+        <div class="insights-grid">
+          <div class="insight card glass">
+            <h4>Customer Engagement</h4>
+            <div class="insight-value">+18%</div>
+          </div>
+          <div class="insight card glass">
+            <h4>Risk Reduction</h4>
+            <div class="insight-value">-12%</div>
+          </div>
+          <div class="insight card glass">
+            <h4>Forecast Confidence</h4>
+            <div class="insight-value">94%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" class="section industries">
+      <div class="container">
+        <h3 class="section-title">Industries</h3>
+        <div class="industries-grid">
+          <div class="industry card glass">Healthcare</div>
+          <div class="industry card glass">Finance</div>
+          <div class="industry card glass">Education</div>
+          <div class="industry card glass">Manufacturing</div>
+          <div class="industry card glass">Cybersecurity</div>
+          <div class="industry card glass">Sports Analytics</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section impact">
+      <div class="container">
+        <h3 class="section-title">Global Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-card card glass" data-target="10000000"> 
+            <div class="impact-value">0</div>
+            <div class="impact-label">Predictions Generated</div>
+          </div>
+          <div class="impact-card card glass" data-target="500000">
+            <div class="impact-value">0</div>
+            <div class="impact-label">Business Decisions Supported</div>
+          </div>
+          <div class="impact-card card glass" data-target="150">
+            <div class="impact-value">0</div>
+            <div class="impact-label">Countries Reached</div>
+          </div>
+          <div class="impact-card card glass" data-target="99.9" data-fixed="1">
+            <div class="impact-value">0%</div>
+            <div class="impact-label">Platform Uptime</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h3 class="section-title">What customers say</h3>
+        <div class="testimonials-grid">
+          <div class="test card glass">
+            <p>“NEXUS AI transformed our analytics workflow and improved decision making.”</p>
+            <div class="t-meta">— Sarah Chen, Data Director</div>
+          </div>
+          <div class="test card glass">
+            <p>“The command center provides real-time clarity across our stack.”</p>
+            <div class="t-meta">— Miguel Alvarez, CTO</div>
+          </div>
+          <div class="test card glass">
+            <p>“Insightful, reliable, and performance-focused — a must-have.”</p>
+            <div class="t-meta">— Priya Patel, VP Product</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h3 class="section-title">Contact</h3>
+        <div class="contact-grid">
+          <form class="contact-form card glass" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send Message</button>
+          </form>
+          <div class="contact-info card glass">
+            <h4>Reach Us</h4>
+            <p>Secure inquiries and enterprise partnerships.</p>
+            <div class="contact-meta">
+              <div>Email: hello@nexus.ai</div>
+              <div>Phone: +1 (555) 010-0099</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">NEXUS AI</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="socials">
+        <a aria-label="LinkedIn" href="#">LinkedIn</a>
+        <a aria-label="GitHub" href="#">GitHub</a>
+        <a aria-label="Twitter" href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">© 2026 NEXUS AI Command Center</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
