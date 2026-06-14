@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   // Theme toggle (dark / light)
   const themeToggle = document.getElementById('themeToggle');
   const root = document.documentElement;
-  const storedTheme = localStorage.getItem('nexus-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark');
+  const storedTheme = localStorage.getItem('nexus-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
   function updateToggleUI(){
     const sun = document.querySelector('.icon-sun');
     const moon = document.querySelector('.icon-moon');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
   }
   function applyTheme(t){
-    if(t==='light') root.setAttribute('data-theme','light'); else root.removeAttribute('data-theme');
+    root.setAttribute('data-theme', t);
     localStorage.setItem('nexus-theme', t);
     updateToggleUI();
   }
@@ -35,6 +35,14 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   // set initial theme
   applyTheme(storedTheme);
+
+  // Small visual reveal for dashboard preview
+  const preview = document.querySelector('.dashboard-screenshot');
+  if(preview){
+    preview.style.opacity = 0;
+    preview.style.transform = 'translateY(8px) scale(0.995)';
+    setTimeout(()=>{ preview.style.transition = 'opacity 700ms ease, transform 700ms ease'; preview.style.opacity=1; preview.style.transform='translateY(0) scale(1)'; }, 250);
+  }
 
   // Navbar transparency on scroll
   const navbar=document.getElementById('navbar');
@@ -60,60 +68,68 @@ document.addEventListener('DOMContentLoaded',()=>{
   sections.forEach(s=>{ s.classList.add('reveal'); sectionObserver.observe(s); });
 
   // Animated counters
-  const numObservers=new IntersectionObserver((entries,observer)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        const targets=entry.target.querySelectorAll('[data-target], .metric-value, .impact-value');
-        targets.forEach(el=>animateNumber(el));
-        observer.unobserve(entry.target);
+  const counterTargets = document.querySelectorAll('[data-target]');
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const element = entry.target;
+      const rawTarget = element.dataset.target;
+      if (!rawTarget) return;
+      const suffix = element.dataset.suffix || '';
+      const target = parseFloat(rawTarget);
+      const duration = 1400;
+      const startTime = performance.now();
+
+      function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        let value = target * eased;
+
+        if (rawTarget.includes('.')) {
+          value = value.toFixed(2);
+        } else {
+          value = Math.round(value).toLocaleString();
+        }
+
+        element.textContent = `${value}${suffix}`;
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          element.textContent = `${rawTarget}${suffix}`;
+        }
       }
+
+      requestAnimationFrame(update);
+      observer.unobserve(element);
     });
-  }, {threshold:0.25});
+  }, { threshold: 0.25 });
 
-  document.querySelectorAll('.metrics, .impact').forEach(section=>numObservers.observe(section));
+  counterTargets.forEach(target => counterObserver.observe(target));
 
-  function animateNumber(el){
-    const parent=el.closest('[data-target]') || el.parentElement;
-    let target=el.dataset.target || parent.dataset.target;
-    if(!target) return;
-    const fixed=el.dataset.fixed || parent.dataset.fixed || 0;
-    const decimals = el.dataset.decimals || 0;
-    // normalize special cases like percentages
-    let start=0; let end=parseFloat(target);
-    const duration=1400; const startTime=performance.now();
-    function step(t){
-      const p=Math.min(1,(t-startTime)/duration);
-      const eased=1 - Math.pow(1-p,3);
-      let value = start + (end-start)*eased;
-      if(fixed>0) value = value.toFixed(fixed);
-      else if(decimals>0) value = (value/100).toFixed(1);
-      else value = Math.floor(value).toLocaleString();
-      if(parent.classList.contains('metric')){
-        if(parent.dataset.target && parent.dataset.target.length>4 && !fixed) el.textContent = Math.floor(value).toLocaleString();
-        else if(parent.dataset.target && parent.dataset.target.includes('.') && !fixed) el.textContent = value + (parent.dataset.target.includes('%')? '%' : (parent.dataset.target.length<4? '' : ''));
-        else el.textContent = (fixed? value + (parent.dataset.target.includes('%')? '%' : '') : value);
-      } else if(el.classList.contains('impact-value')){
-        el.textContent = fixed? value + (parent.dataset.target.includes('%')? '%' : '') : Math.floor(end*(p)).toLocaleString();
-      } else {
-        el.textContent = fixed? value + (parent.dataset.target.includes('%')? '%' : '') : Math.floor(end*p).toLocaleString();
-      }
-      if(p<1) requestAnimationFrame(step);
-      else {
-        if(fixed) el.textContent = end + (parent.dataset.target.includes('.')? (parent.dataset.target.includes('%')? '%' : '') : '');
-        else el.textContent = (end>=1000? Math.floor(end).toLocaleString() : end.toString());
-      }
-    }
-    requestAnimationFrame(step);
-  }
+  const progressBars = document.querySelectorAll('.progress-fill[data-progress]');
+  const progressObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const bar = entry.target;
+      const value = bar.dataset.progress;
+      bar.style.width = `${value}%`;
+      bar.style.opacity = '1';
+      observer.unobserve(bar);
+    });
+  }, { threshold: 0.2 });
+
+  progressBars.forEach(bar => progressObserver.observe(bar));
 
   // Contact form simple handler
   const contactForm=document.getElementById('contactForm');
-  contactForm.addEventListener('submit',e=>{
-    e.preventDefault();
-    const btn=contactForm.querySelector('button');
-    btn.textContent='Sending...';
-    setTimeout(()=>{btn.textContent='Send Message'; contactForm.reset(); alert('Message sent — thank you!');}, 900);
-  });
+  if (contactForm) {
+    contactForm.addEventListener('submit',e=>{
+      e.preventDefault();
+      const btn=contactForm.querySelector('button');
+      btn.textContent='Sending...';
+      setTimeout(()=>{btn.textContent='Send Message'; contactForm.reset(); alert('Message sent — thank you!');}, 900);
+    });
+  }
 
   // Smooth internal link behavior for better UX
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
