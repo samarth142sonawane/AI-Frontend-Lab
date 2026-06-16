@@ -69,8 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const setTheme = (theme) => {
         const isLight = theme === 'light';
         document.body.classList.toggle('light-mode', isLight);
-        themeToggle.textContent = isLight ? 'Dark' : 'Light';
+        themeToggle.classList.toggle('is-light', isLight);
         themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+        themeToggle.setAttribute('aria-pressed', String(isLight));
     };
 
     setTheme(initialTheme);
